@@ -25,7 +25,7 @@ public class Main {
 
         // (5) Создайте метод addOrSubtractAndPrint(int initValue, int delta, boolean increment). Если increment = true, то метод должен к
         //initValue прибавить delta и отпечатать в консоль результат, в противном случае - вычесть;
-        addOrSubtractAndPrint(1,2, false);
+        addOrSubtractAndPrint(2,2, true);
     }
 
     public static void greetings() {
@@ -67,7 +67,7 @@ public class Main {
     }
 
     public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
-        if (increment = true) {
+        if (increment == true) {
             System.out.println(initValue + delta);
         } else {
             System.out.println(initValue - delta);
