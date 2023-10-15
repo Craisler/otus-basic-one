@@ -3,8 +3,15 @@ package ru.otus.java.basic.hw2;
 import java.util.Scanner;
 
 public class Main {
+    n = String;
+    String words;
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число повторения вывода текста");
+        n = scanner.nextInt();
+        System.out.println("Введите выводимый текст");
+        text = scanner.nextLine();
 // Реализуйте метод, принимающий в качестве аргументов целое число и строку, и печатающий в консоль строку указанное количество раз
         metod1();
     }
@@ -16,14 +23,9 @@ public class Main {
 
 // -Реализуйте метод, принимающий в качестве аргумента целочисленный массив, и печатающий в консоль сумма элементов какой из половин массива больше.
 
-
     public static void metod1() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите число повторения вывода текста");
-        int n = scanner.nextInt();
-        System.out.println("Введите выводимый текст");
-        String text = scanner.nextLine();
         for (int i = 1; i <= n; i++)
             System.out.println(text + i);
     }
+
 }
