@@ -5,5 +5,7 @@ public class User {
     private String login;
     private String password;
 
-    public User (long id,)
+    private Set<Role> roles;
+
+    public User (long id,String login, String password)
 }

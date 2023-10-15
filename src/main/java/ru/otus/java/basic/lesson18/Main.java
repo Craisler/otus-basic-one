@@ -1,6 +1,7 @@
 package ru.otus.java.basic.lesson18;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -26,6 +27,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+        List<User> result = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         String roleName = scanner.nextLine();
         try(Connection connection = DriverManager.getConnection(DATABASE_URL)) {
@@ -36,6 +38,8 @@ public class Main {
                         long id = rs.getLong("id");
                         String login = rs.getString("login");
                         String password = rs.getString("password");
+                        User user = new User(id, login, password);
+                        ((ArrayList<?>) result).add(user);
                     }
                 }
             } catch (SQLException e) {
