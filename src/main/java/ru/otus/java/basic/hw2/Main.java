@@ -9,16 +9,16 @@ public class Main {
         metod1(5, "Строка");
         System.out.println(" ");
 
-        metod2();
+        metod2(2,4,5,6,6,3,4);
         System.out.println(" ");
 
-        metod3(5);
+        metod3(5, 2, 2, 3, 4, 5, 6);
         System.out.println(" ");
 
-        metod4(10);
+        metod4(10,1, 3, 44, 456, 456);
         System.out.println(" ");
 
-        metod5();
+        metod5(1, 3, 2, 1);
         System.out.println(" ");
     }
 
@@ -36,11 +36,9 @@ public class Main {
             System.out.println(stroka + " " + i);
     }
 
-    public static void metod2() {
+    public static void metod2(int... arr) {
         // в качестве аргумента целочисленный массив, суммирующий все элементы, значение которых больше 5, и печатающий полученную сумму в консоль.
         int sum = 0;
-        int[] arr = {1, 3, 44, 456};
-
         for (int arrNumber = 0; arrNumber < arr.length; arrNumber++) {
             if (arr[arrNumber] > 5) {
                 sum += arr[arrNumber];
@@ -51,30 +49,27 @@ public class Main {
         System.out.println("Сумма чисел в массиве больше 5 = " + sum);
     }
 
-    public static void metod3(int numberArrays) {
+    public static void metod3(int numberArr, int... arr) {
         // в качестве аргументов целое число и ссылку на целочисленный массив, метод должен заполниться каждую ячейку массива указанным числом.
-        int[] arr = {1, 3, 44, 456, 456};
         for (int numArrays = 0; numArrays < arr.length; numArrays++) {
-            arr[numArrays] = numberArrays;
+            arr[numArrays] = numberArr;
 
         }
         System.out.println(Arrays.toString(arr));
     }
 
-    public static void metod4(int numberArrays) {
+    public static void metod4(int numberArr, int... arr) {
 //    в качестве аргументов целое число и ссылку на целочисленный массив, увеличивающий каждый элемент которого на указанное число
-        int[] arr = {1, 3, 44, 456, 456};
         for (int arrNumber = 0; arrNumber < arr.length; arrNumber++) {
-            arr[arrNumber] = arr[arrNumber] + numberArrays;
+            arr[arrNumber] = arr[arrNumber] + numberArr;
         }
         System.out.println(Arrays.toString(arr));
     }
 
     //    принимающий в качестве аргумента целочисленный массив и печатающий в консоль сумму элементов какой из половин массива больше.
-    public static void metod5() {
+    public static void metod5(int... arr) {
         int sum1 = 0;
         int sum2 = 0;
-        int[] arr = {1, 3, 2, 1};
         for (int arrNumber = 0; arrNumber < arr.length / 2; arrNumber++) {
             sum1 += arr[arrNumber];
         }
