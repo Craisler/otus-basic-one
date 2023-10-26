@@ -47,5 +47,4 @@ public class Cat {
                 "Аппетит" + appetite + "\n" +
                 "Требуется еды" + satiety + "\n";
     }
-
 }

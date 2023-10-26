@@ -24,7 +24,6 @@ public class Plate {
         this.maxFood = maxFood;
         this.currentFood = maxFood;
     }
-
     /**
      * Добавить еду в тарелку
      *
@@ -52,6 +51,4 @@ public class Plate {
             return false;
         }
     }
-
-
 }

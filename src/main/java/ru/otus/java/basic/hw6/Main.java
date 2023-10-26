@@ -13,7 +13,7 @@ public class Main {
                 new Cat("Муся",15),
                 new Cat("Вася",20)
         };
-
+        
         Plate plate = new Plate(30);
         for (Cat cat :cats) {
             cat.eatCat(plate);
