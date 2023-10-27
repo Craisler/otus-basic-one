@@ -43,8 +43,8 @@ public class Cat {
 
     @Override
     public String toString() {
-        return "Имя:" + name + '\'' + "\n" +
-                "Аппетит" + appetite + "\n" +
-                "Требуется еды" + satiety + "\n";
+        return "Имя: " + name + "\n" +
+                "Аппетит: " + appetite + "\n" +
+                "Кот насытился: " + satiety + "\n";
     }
 }
