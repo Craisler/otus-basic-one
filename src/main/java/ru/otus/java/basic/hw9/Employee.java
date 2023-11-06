@@ -1,31 +1,26 @@
 package ru.otus.java.basic.hw9;
 
 public class Employee {
-    //Создайте класс Сотрудник с полями: имя, возраст;
-//Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий список их имен;
-//Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный возраст, и возвращающий список сотрудников, возраст которых больше либо равен указанному аргументу;
-//Реализуйте метод, принимающий в качестве аргумента список сотрудников и минимальный средний возраст, и проверяющий что средний возраст сотрудников превышает указанный аргумент;
-//Реализуйте метод, принимающий в качестве аргумента список сотрудников, и возвращающий ссылку на самого молодого сотрудника.
-    public static void main(String[] args) {
+//Создайте класс Сотрудник с полями: имя, возраст;
 
+    private final String name;
+    private final Integer age;
 
-        User[] arrayUsers = new User[]{
-                new User("Иванов1", "Иван1", "Иванович1", 1968, "my1@email.ru"),
-                new User("Иванов2", "Иван2", "Иванович2", 1978, "my2@email.ru"),
-                new User("Иванов3", "Иван3", "Иванович3", 1988, "my3@email.ru"),
-                new User("Иванов4", "Иван4", "Иванович4", 1955, "my4@email.ru"),
-                new User("Иванов5", "Иван5", "Иванович5", 1999, "my5@email.ru"),
-                new User("Иванов6", "Иван6", "Иванович6", 2000, "my6@email.ru"),
-                new User("Иванов7", "Иван7", "Иванович7", 2001, "my7@email.ru"),
-                new User("Иванов8", "Иван8", "Иванович8", 2002, "my8@email.ru"),
-                new User("Иванов9", "Иван9", "Иванович9", 2003, "my9@email.ru"),
-                new User("Иванов10", "Иван10", "Иванович10", 1982, "my10@email.ru"),
-        };
+    public String getName() {
+        return name;
+    }
 
-        for (User arrayUser : arrayUsers) {
-            if (currentYear - arrayUser.getBirthdateYear() > 40) {
-                System.out.println(arrayUser.toString());
-            }
-        }
+    public Integer getAge() {
+        return age;
+    }
+
+    public Employee(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String toString() {
+        return "Имя: " + name +
+                ", Возраст: " + age;
     }
 }
