@@ -1,10 +1,13 @@
 package ru.otus.java.basic.hw10;
 
+import ru.otus.java.basic.hw10.util.Measure;
+
 public class Main {
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Иван", "+79511111111");
         //    Метод add() должен позволять добавлять запись имя-телефон;
+        phoneBook.add("Петр", "+79522222222");
         phoneBook.add("Петр", "+79522222222");
         phoneBook.add("Петр", "+79533333333");
         phoneBook.add("Саша", "+79544444444");
@@ -16,7 +19,16 @@ public class Main {
         System.out.println("Поиск номеров по имени Саша: " + phoneBook.find("Саша"));
         System.out.println("Поиск номеров по имени Коля: " + phoneBook.find("Коля")); // null, т.к. не найдены результаты
         //    Метод containsPhoneNumber должен проверять наличие телефона в справочнике.
-        System.out.println("Поиск номера +79555555555:  " + phoneBook.containsPhoneNumber("+79555555555"));
-        System.out.println("Поиск номера +79555555551: " + phoneBook.containsPhoneNumber("+79555555551"));
+
+        Measure.stamp();
+        System.out.println("Поиск номера +79555555555:  " + phoneBook.containsPhoneNumberV1SLOW("+79555555555"));
+        System.out.println("Поиск номера +79555555551: " + phoneBook.containsPhoneNumberV1SLOW("+79555555551"));
+        Measure.print();
+
+        Measure.stamp();
+        System.out.println("Поиск номера +79555555555:  " + phoneBook.containsPhoneNumberV2FAST("+79555555555"));
+        System.out.println("Поиск номера +79555555551: " + phoneBook.containsPhoneNumberV2FAST("+79555555551"));
+        Measure.print();
+
     }
 }
