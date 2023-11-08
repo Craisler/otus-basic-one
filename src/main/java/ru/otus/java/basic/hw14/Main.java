@@ -1,5 +1,7 @@
 package ru.otus.java.basic.hw14;
 
+import ru.otus.java.basic.hw14.util.Measure;
+
 public class Main {
 
 //    Реализация №1
@@ -14,19 +16,23 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Measure.stamp();
         createRegArray();
+        Measure.print();
 
+        Measure.stamp();
         createThreadArray();
+        Measure.print();
     }
 
     private static void createRegArray() {
-        double[] array = new double[100_000];
-        for (int i = 0; i <= array.length; i++)
+        double[] array = new double[100_000_000];
+        for (int i = 0; i < array.length; i++)
             array[i] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
     }
 
     public static void createThreadArray() {
-        double[] array = new double[100_000];
+        double[] array = new double[100_000_000];
 
         for (int j = 0; j < 4; j++) {
             int counter = j;
@@ -35,7 +41,7 @@ public class Main {
                         int inc;
                         for (int i = 0; i < array.length; i = i + 4) {
                             inc = i + counter;
-                            array[inc] = 1.14 * Math.cos(inc) * Math.sin(inc * 0.2) * Math.cos(inc / 1.2);
+                            array[inc] = 1.14 * Math.cos(i) * Math.sin(i * 0.2) * Math.cos(i / 1.2);
                         }
                     }
             ).start();
