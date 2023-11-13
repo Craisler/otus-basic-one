@@ -40,7 +40,7 @@ public class Main {
 
     }
 
-    private static int[] returnAfterOne(int[] arrays) {
+    public static int[] returnAfterOne(int[] arrays) {
         for (int i = arrays.length - 1; i >= 0; i--) {
             if (arrays[i] == 1) {
                 return Arrays.copyOfRange(arrays, i + 1, arrays.length);
